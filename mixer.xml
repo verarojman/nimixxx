@@ -1,0 +1,141 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    The mixer section.
+-->
+<Template>
+  <WidgetGroup>
+    <ObjectName>Mixer</ObjectName>
+    <Layout>vertical</Layout>
+    <SizePolicy>f,min</SizePolicy>
+    <Children>
+
+      
+      <WidgetGroup>
+        <ObjectName>DeckControls</ObjectName>
+        <SizePolicy>min,min</SizePolicy>
+        <Layout>horizontal</Layout>
+        <Children>
+          <!-- 4-Decks LEFT MIXER -->
+          <WidgetGroup>
+            <Layout>horizontal</Layout>
+            <Children>
+              <Template src="skin:left_deck_mixer_controls.xml">
+                <SetVariable name="i">3</SetVariable>
+              </Template>
+            </Children>
+            <Connection>
+              <ConfigKey>[Master],show_4decks</ConfigKey>
+              <BindProperty>visible</BindProperty>
+            </Connection>
+          </WidgetGroup>
+
+          <!-- Default LEFT MIXER -->
+          <Template src="skin:left_deck_mixer_controls.xml">
+            <SetVariable name="i">1</SetVariable>
+          </Template>
+          <!-- Default RIGHT MIXER -->
+          <Template src="skin:right_deck_mixer_controls.xml">
+            <SetVariable name="i">2</SetVariable>
+          </Template>
+
+          <!-- 4-Decks RIGHT MIXER -->
+          <WidgetGroup>
+            <Layout>horizontal</Layout>
+            <Children>
+              <Template src="skin:right_deck_mixer_controls.xml">
+                <SetVariable name="i">4</SetVariable>
+              </Template>
+            </Children>
+            <Connection>
+              <ConfigKey>[Master],show_4decks</ConfigKey>
+              <BindProperty>visible</BindProperty>
+            </Connection>
+          </WidgetGroup>
+        </Children>
+      </WidgetGroup>
+
+
+      <!-- CROSSFADER -->
+      <WidgetGroup>
+        <ObjectName>CrossfaderContainer</ObjectName>
+        <Layout>horizontal</Layout>
+        <Children>
+          <WidgetGroup>
+            <ObjectName>Crossfader</ObjectName>
+            <SizePolicy>me,min</SizePolicy>
+            <Layout>horizontal</Layout>
+            <Children>
+              <SliderComposed>
+                <TooltipId>crossfader</TooltipId>
+                <SizePolicy>me,min</SizePolicy>
+                <MinimumSize>-1,40</MinimumSize>
+                <MaximumSize>-1,40</MaximumSize>
+                <Slider scalemode="STRETCH">slider-horizontal.svg</Slider>
+                <Handle scalemode="STRETCH_ASPECT">handle-horizontal.svg</Handle>
+                <!-- <Handle scalemode="STRETCH_ASPECT">handle-horizontal.svg</Handle> -->
+                <Horizontal>true</Horizontal>
+                <Connection>
+                  <ConfigKey>[Master],crossfader</ConfigKey>
+                  <EmitOnDownPress>false</EmitOnDownPress>
+                </Connection>
+              </SliderComposed>
+            </Children>
+            <Connection>
+              <ConfigKey>[AutoDJ],enabled</ConfigKey>
+              <BindProperty>visible</BindProperty>
+              <Transform>
+                <Not/>
+              </Transform>
+            </Connection>
+          </WidgetGroup>
+
+
+          <!-- AUTO DJ -->
+          <!-- Change crossfader background color if AutoDj is active,
+               https://bugs.launchpad.net/mixxx/+bug/995955 -->
+          <WidgetGroup>
+            <ObjectName>CrossfaderAutoDjActive</ObjectName>
+            <SizePolicy>me,min</SizePolicy>
+            <Layout>horizontal</Layout>
+            <Children>
+              <SliderComposed>
+                <TooltipId>crossfader</TooltipId>
+                <SizePolicy>me,min</SizePolicy>
+                <MinimumSize>-1,40</MinimumSize>
+                <MaximumSize>-1,40</MaximumSize>
+                <Slider scalemode="STRETCH">slider-horizontal.svg</Slider>
+                <Handle scalemode="STRETCH_ASPECT">handle-horizontal.svg</Handle>
+                <Horizontal>true</Horizontal>
+                <Connection>
+                  <ConfigKey>[Master],crossfader</ConfigKey>
+                  <EmitOnDownPress>false</EmitOnDownPress>
+                </Connection>
+              </SliderComposed>
+            </Children>
+            <Connection>
+              <ConfigKey>[AutoDJ],enabled</ConfigKey>
+              <BindProperty>visible</BindProperty>
+            </Connection>
+          </WidgetGroup>
+
+          </Children>
+          <Connection>
+            <ConfigKey>[Deere],hide_crossfader</ConfigKey>
+            <BindProperty>visible</BindProperty>
+            <Transform>
+              <Not/>
+            </Transform>
+          </Connection>
+      </WidgetGroup>
+
+    </Children>
+    <Connection>
+      <ConfigKey>[Master],hide_mixer</ConfigKey>
+      <BindProperty>visible</BindProperty>
+      <Transform>
+        <Not/>
+      </Transform>
+    </Connection>
+  </WidgetGroup>
+</Template>

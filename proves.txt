@@ -1,0 +1,60 @@
+PROVA 0
+================================
++ Intenta obtenir ajuda/més informació sobre algun dels botons o controls
+
+
+PROVA 1 - BASIC PLAYBACK
+================================
++ Busca la cançó X de la llista i fes que soni
++ Pausa la cançó
++ Fes que avanci fins al minut X:XX
++ Fes sonar la cançó des d'aquell punt
+
++ Fes que l'etiqueta de temps de reproducció mostri el temps que queda
+	fins el final de la cancó (en comptes del temps des del seu inici)
+
+
+PROVA 2 - VOLUME ADJUSTMENT & EQ
+================================
++ Carrega una cançó qualsevol a la Pista A
++ Carrega una cançó qualsevol a la Pista B
++ Fes que soni la cançó de la Pista A des de l'inici
++ Baixa del tot el volum de la Pista A
+
++ Fes que soni la cançó de la Pista B des de l'inici
++ Baixa els greus de la Pista A
++ Baixa els aguts i mitjans de la Pista B
++ Puja el volum de la Pista A fins el màxim
+
++ Fes que la mescla sigui un ~25% de la Pista A i un ~75% de la Pista B
++ Para la reproducció de les dues pistes
+
+
+PROVA 3 - KEY & FX
+================================
++ Fes que la Pista B es reprodueixi més ràpidament
++ Fes que la Pista A sincronitzi la seva velocitat de reproducció amb la de la
+	Pista B
+
++ Fes que la Pista A baixi temporalment la seva velocitat de reproducció
+
+
++ Localitza la clau musical (o tonalitat) de la cançó de la Pista B
++ Fes que coincideixi amb la clau de la Pista A (manual o automàticament)
+
+
+
+PROVA 4 - LOOPS & CUES
+================================
++ Fes "zoom" a la graella d'una de les pistes per veure la visualització del so
+	amb més detall
+
++ Busca visual o auditivament una part de la pista que vulguis repetir i crea
+	un LOOP de 2 compassos
+
++ Incrementa el tamany del loop
++ Decrementa el tamany del loop fins a 1/4 de compàs
+
++ Situa el marcador nº 3 en algun lloc de la pista que vulguis
++ Reprodueix la pista durant uns segons i fes que torni al punt que has marcat
+
